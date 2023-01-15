@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #191919;
+}
+
+%default-text {
+    font-family: 'DM Sans';
+    color: #FFFFFF;
+}
+
+.normal{
+    @extend %default-text;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.active{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    color: #118DA8;
+}
+
+.underlined{
+    background: url(../img/icons/underline.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.bold {
+    font-weight: 700;   
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: 3.2px;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 16vh;
+    margin: 0 3% 1.5% 3%;
+    // margin-left: 3%;
+    // margin-right: 3%;
+    align-items: center;
+
+        ul {
+            grid-column: 3/4;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        li {
+            list-style: none;
+        }
+
+}
+
+.header_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 7%;
+
+        .head_img{
+            width: 100%;
+            max-width: 650px;
+            height: 100%;
+            max-height: 873px;
+        }
+
+        .header_text{
+            margin-left: 5%;
+
+            .header_title{
+                @extend %default-text;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 70px;
+                line-height: 88px;
+                letter-spacing: 3.2px;
+            }
+    
+            .header_icons{
+                margin-top: 9%;
+                
+                div{
+                    @extend %default-text;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+
+                .icon{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: start;
+                    max-width: 16vw;
+                }
+            }
+        }
+
+}
+
+.late_ep{
+    margin: 7% 4% 4% 4.5%;
+
+    .episode_title{
+        margin-bottom: 3.5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .ep_title_text{
+            @extend %default-text;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 79px;
+            letter-spacing: 2.88px;
+        }
+
+        .button{
+            @extend %default-text;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 27px;
+            background: #118DA8;
+            border-radius: 6px;
+            text-decoration: none;
+            text-align: center;
+            height: 51px;
+            width: 178px;
+            border: none;
+            outline: none;
+        }
+    }
+
+    .episode_block{
+        background: #000000;
+        border-radius: 32px;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3%;
+
+            img{
+                padding: 2.5%;
+            }
+
+            .late_content{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+                margin-bottom: 1.2%;
+                max-width: 55vw;
+
+                .ep_category{
+                    @extend %default-text;
+                    padding: .3% 1.3% .3% 1.3%;
+                    width: fit-content;
+                    background: #191919;
+                    border-radius: 6px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    margin-top: 2%;
+                    
+                }
+
+                .ep_num{
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: #118DA8;
+                }
+
+                .ep_title{
+                    @extend %default-text;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 64px;
+                    line-height: 65px;
+                    letter-spacing: 2.56px;
+                }
+
+                .ep_text{
+                    @extend %default-text;
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 33px;
+                }
+
+                .ep_button{
+                    @extend %default-text;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    background: #118DA8;
+                    border-radius: 6px;
+                    padding: 1%;
+                    outline: none;
+                    border: none;
+                    height: 51px;
+                    width: 208px;
+                }
+            }
+    }
+}
+
+.host_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15% 4% 10% 4.5%;
+
+    .host_content{
+        max-width: 39vw;
+
+            .next{
+                background-color: #118DA8;
+                border-radius: 400px;
+                height: 102px;
+                width: 102px;
+                position: relative;
+                    img {
+                        position: absolute;
+                        top: 11%;
+                        left: 26%;
+                    }
+            }
+
+            .host_meet{
+                margin-top: 3%;
+                font-family: 'DM Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 27px;
+                color: #118DA8;
+            }
+
+            .host_name{
+                @extend %default-text;
+                margin-top: 1.5%;
+                margin-bottom: 5%;
+                font-weight: 400;
+                font-size: 65px;
+                line-height: 79px;
+                letter-spacing: 2.88px;
+            }
+
+            .host_text{
+                font-family: 'DM Sans';
+                margin-bottom: 5%;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 33px;
+                color: rgba(255, 255, 255, 0.7);           
+            }
+    }
+
+    .host_img{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.subscribe {
+    min-height: 110vh;
+        
+    .sub_content{
+        margin-left: 4%;
+        margin-right: 4.5%;
+        padding-top: 5%;
+        background: #000000;
+        border-radius: 32px;
+        height: 357px;
+        width: 1325px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+            .sub_text{
+                    max-width: 33vw;
+                .sub_email{
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #118DA8;
+                }
+                .sub_title{
+                    @extend %default-text;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 72px;
+                    line-height: 79px;
+                    letter-spacing: 2.88px;
+                }
+            }
+
+            .sub_form{
+                display: flex;
+                flex-direction: column;
+
+                    input{
+                        height: 72px;
+                        width: 500px;
+                        background: #191919;
+                        border: 1px solid #191919;
+                        border-radius: 6px;
+                        font-family: 'DM Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 29px;
+                        color: rgba(255, 255, 255, 0.7);
+                        text-indent: 3%;
+                        margin-bottom: 4%;
+                    }
+
+                    button{
+                        font-family: 'DM Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 29px;
+                        color: rgba(255, 255, 255, 0.7);
+                        background: #118DA8;
+                        border-radius: 6px;
+                        height: 41px;
+                        width: 80px;
+                        outline: none;
+                        border: none;
+                    }
+            }
+        
+    }
+}
+.reviews{
+    margin-left: 4%;
+    margin-right: 4.5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+        .review_block{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background: #000000;
+            border-radius: 32px;
+            height: 321px;
+            width: 423px;
+            margin-bottom: 2%;
+
+                .review_content{
+                    margin: 10%;
+                    max-width: 22.5vw;
+
+                    .review_comm{
+                        margin-top: 3%;
+                        @extend %default-text;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 36px;
+                        line-height: 43px;
+                    }
+
+                    .rev_author{
+                        margin-top: 5%;
+                        font-family: 'DM Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 29px;
+                        color: rgba(255, 255, 255, 0.7);                    
+                    }
+                }
+        }
+}
+
+.footer{
+    min-height: 60vh;
+    display: grid;
+    grid-template-rows: 1fr 2.5fr 1fr;
+
+        .foot_blocks{
+            grid-row: 2/3;
+            margin-left: 4%;
+            display: flex;
+            // justify-content: space-between;
+            flex-direction: row;
+            align-items: flex-start;
+
+
+            .foot_block{
+
+                .foot_text{
+                    @extend %default-text;
+                    font-style: normal;
+                    line-height: 27px;
+                    font-weight: 400;
+                    font-size: 17px;
+                    cursor: pointer;
+                }
+
+                .foot_logo{
+                    margin-top: 10%;
+                }
+               
+            } 
+
+
+            .icons{
+                margin-left: 4%;
+                min-width: 16vw;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .foot_left{
+                margin-left: 22%;
+            }
+
+            .left_less{
+                margin-left: 9%;
+            }
+        }
+}
